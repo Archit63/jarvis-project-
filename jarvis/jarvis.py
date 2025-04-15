@@ -9,7 +9,7 @@ import smtplib
 
 engine = pyttsx3.init('sapi5') #setup speech recoging
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id) #for david voice
+engine.setProperty('voice', voices[0].id) # 0 is david voice means male voice  if any case you want to female voice simpliy replace [0] to [1].
 
 def speak(audio):
     """Function to speak the given audio"""
@@ -26,7 +26,7 @@ def wish_me():
         speak("Good Evening!")
     speak("WELCOME BACK MR SHUKLA \nhow can i help you")
 
-def take_command(): #for on microphone and turn into string
+def take_command(): #for on microphone and turn into string you can see you command in terminal in string 
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
         elif 'open vs' in query:
             speak("sir,I M opening VS Code")
-            code_path = "C:\\Users\\Archit\\AppData\\Local\\Programs\\Microsoft VS"
+            code_path = "C:\\Users\\Archit\\AppData\\Local\\Programs\\Microsoft VS" # you can put your path in fileManager this is owner(my) Vs code path
             os.startfile(code_path)
 
         elif 'open excel' in query:
